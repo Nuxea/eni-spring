@@ -1,6 +1,5 @@
 package com.ecommerce.security;
 
-import com.ecommerce.model.Role;
 import com.ecommerce.security.jwt.JwtAuthorizationFilter;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
@@ -50,6 +49,8 @@ public class SecurityConfig {
                 .antMatchers("/api/authentication/**").permitAll()
                 .antMatchers("/api/auction/**").permitAll()
                 .antMatchers(HttpMethod.GET, "/api/credit").permitAll()
+                .antMatchers(HttpMethod.GET, "/api/order").permitAll()
+                .antMatchers("/api/bid").permitAll()
                 .antMatchers( "/api/user/**").permitAll()
                 .anyRequest().authenticated()
                 .and()

@@ -23,31 +23,31 @@ public class User {
     @Column(name = "password", nullable = false, length = 100)
     private String password;
 
-    @Column(name = "first_name", nullable = true, length = 100)
+    @Column(name = "first_name", length = 100)
     private String firstName;
 
-    @Column(name = "last_name", nullable = true, length = 100)
+    @Column(name = "last_name", length = 100)
     private String lastName;
 
     @Column(name = "email", unique = true, nullable = false, length = 100)
     private String email;
 
-    @Column(name = "phone", nullable = true, length = 100)
+    @Column(name = "phone", length = 100)
     private String phone;
 
-    @Column(name = "address", nullable = true, length = 200)
+    @Column(name = "address", length = 200)
     private String address;
 
-    @Column(name = "zip_code", nullable = true, length = 100)
+    @Column(name = "zip_code", length = 100)
     private String zipCode;
 
-    @Column(name = "city", nullable = true, length = 100)
+    @Column(name = "city", length = 100)
     private String city;
 
     @Column(name = "create_time", nullable = false, updatable = false)
     private LocalDateTime createTime;
 
-    @Column(name = "credit", nullable = true)
+    @Column(name = "credit")
     private int credit;
 
     @Enumerated(EnumType.STRING)
